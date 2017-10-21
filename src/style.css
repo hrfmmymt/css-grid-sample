@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+body,
+h1,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 50% 1fr;
+  grid-template-areas:
+    "header body"
+    "header footer";
+  grid-template-rows: repeat(1, auto);
+}
+
+.header {
+    grid-area: header;
+    background: red;
+}
+
+.contents {
+    grid-area: body;
+    background: blue;
+}
+
+.footer {
+    grid-area: footer;
+    background: yellow;
+}
